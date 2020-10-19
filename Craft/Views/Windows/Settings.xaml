@@ -1,0 +1,55 @@
+﻿<Window
+    x:Class="Craft.Views.Windows.Settings"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Craft"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    x:Name="SettingsWindow"
+    Title="Settings"
+    Width="520"
+    Height="250"
+    mc:Ignorable="d">
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                Grid.Row="0"
+                Margin="8,4"
+                FontFamily="Segoe UI"
+                FontSize="16"
+                Text="Configure Craft as your git editor:" />
+            <TextBlock
+                x:Name="configureText"
+                Grid.Row="1"
+                Margin="16,4"
+                FontFamily="Segoe UI"
+                FontSize="14"
+                TextWrapping="Wrap">
+                Open&#032;<Hyperlink x:Name="gitConfigFilePathLink">
+                    <Run x:Name="gitConfigFilePath" />
+                </Hyperlink>
+                , and set the editor configuration as follows:</TextBlock>
+            <TextBox
+                x:Name="configurationExample"
+                Grid.Row="2"
+                Margin="16,4"
+                IsReadOnly="True" />
+            <TextBlock
+                Grid.Row="4"
+                Margin="8,4"
+                FontFamily="Segoe UI"
+                FontSize="9"
+                TextWrapping="Wrap">
+                Portions copyright Kirk Woll 2018.
+                Icon made by Freepik (https://www.flaticon.com/authors/freepik) from www.flaticon.com
+            </TextBlock>
+        </Grid>
+    </ScrollViewer>
+</Window>
